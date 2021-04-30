@@ -1,12 +1,12 @@
 {
-    "name": "goalgorilla/social_template",
+    "name": "mbagnall/social_template",
     "description": "Social project template for composer based Open Social projects.",
     "type": "project",
     "license": "GPL-2.0+",
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "goalgorilla/open_social": "~10.0.7",
+        "itcon-inc/open_social": "10.0.x",
         "php": "^7.2",
         "monolog/monolog": "^1.17"
     },
@@ -18,6 +18,10 @@
         {
             "type": "composer",
             "url": "https://asset-packagist.org"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/itcon-inc/open_social"
         }
     ],
     "extra": {
@@ -31,22 +35,22 @@
             "npm-asset"
         ],
         "installer-paths": {
-            "html/core": [
+            "core": [
                 "drupal/core"
             ],
-            "html/modules/contrib/{$name}": [
+            "modules/contrib/{$name}": [
                 "type:drupal-module"
             ],
-            "html/profiles/contrib/social": [
-                "goalgorilla/open_social"
+            "profiles/contrib/social": [
+                "itcon-inc/open_social"
             ],
-            "html/profiles/contrib/{$name}": [
+            "profiles/contrib/{$name}": [
                 "type:drupal-profile"
             ],
-            "html/themes/contrib/{$name}": [
+            "themes/contrib/{$name}": [
                 "type:drupal-theme"
             ],
-            "html/libraries/{$name}": [
+            "libraries/{$name}": [
                 "type:drupal-library",
                 "type:bower-asset",
                 "type:npm-asset"
